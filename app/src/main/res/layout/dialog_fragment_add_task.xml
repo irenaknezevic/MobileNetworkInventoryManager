@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="AddTaskViewModel"
+            type="com.knezevic.mobilenetworkinventorymanager_pis.viewmodel.AddTaskViewModel" />
+
+        <variable
+            name="Site"
+            type="com.knezevic.mobilenetworkinventorymanager_pis.model.Site" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:padding="10dp"
+        tools:context=".fragments.AddTaskDialogFragment">
+
+        <TextView
+            android:id="@+id/tv_add_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/task_site"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_site"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_site" />
+
+        <TextView
+            android:id="@+id/tv_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/task_technician"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_site" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_user"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_user"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tv_add_task_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/task_category"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_user" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_task_category"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tv_add_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/task_description"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_category" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_desc"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/text_border_drawable"
+            android:inputType="textMultiLine"
+            android:maxLength="199"
+            android:padding="5dp"
+            android:text="@={AddTaskViewModel.createTask.task_description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_desc" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_close_adding"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/btn_close_shape"
+            android:onClick="@{()->AddTaskViewModel.clickClose()}"
+            android:text="@string/close"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toStartOf="@+id/btn_submit_adding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_desc" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit_adding"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_shape"
+            android:onClick="@{()->AddTaskViewModel.clickSubmit()}"
+            android:text="@string/submit"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_close_adding"
+            app:layout_constraintTop_toBottomOf="@+id/et_desc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

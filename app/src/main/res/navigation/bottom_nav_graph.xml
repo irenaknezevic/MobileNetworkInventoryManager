@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/nav_sites_fragment">
+    <fragment
+        android:id="@id/nav_sites_fragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.SitesFragment"
+        android:label="@string/sites"
+        tools:layout="@layout/fragment_sites">
+        <action
+            android:id="@+id/action_sites_fragment_to_details_fragment"
+            app:destination="@id/nav_site_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@id/nav_tasks_fragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.TasksFragment"
+        android:label="@string/tasks"
+        tools:layout="@layout/fragment_tasks">
+        <action
+            android:id="@+id/action_nav_tasks_fragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@id/nav_maps_fragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.MapsFragment"
+        android:label="@string/maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@id/nav_profile_fragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_site_details_fragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.SiteDetailsFragment"
+        android:label="@string/site_details"
+        tools:layout="@layout/fragment_site_details" />
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.knezevic.mobilenetworkinventorymanager_pis.fragments.TaskDetailsFragment"
+        android:label="@string/task_details"
+        tools:layout="@layout/fragment_task_details" />
+</navigation>

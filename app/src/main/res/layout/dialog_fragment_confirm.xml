@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="CompletedTaskViewModel"
+            type="com.knezevic.mobilenetworkinventorymanager_pis.viewmodel.CompletedTaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:elevation="10dp"
+        tools:context=".fragments.ConfirmDialogFragment">
+
+        <TextView
+            android:id="@+id/tv_task_completed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/dialog_completed"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_close"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_task_completed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/close"
+            android:background="@drawable/btn_close_shape"
+            android:textColor="@color/colorWhite"
+            android:layout_marginEnd="5dp"
+            android:onClick="@{()->CompletedTaskViewModel.clickClose()}" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_task_completed"
+            app:layout_constraintStart_toEndOf="@+id/btn_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/confirm"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="5dp"
+            android:onClick="@{()->CompletedTaskViewModel.clickConfirm()}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

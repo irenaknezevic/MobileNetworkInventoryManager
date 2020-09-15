@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Inventory Manager</string>
+
+    <!-- LOGIN-->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+
+    <!--  TITLES  -->
+    <string name="sites">Sites</string>
+    <string name="tasks">Tasks</string>
+    <string name="maps">Map</string>
+    <string name="profile">Profile</string>
+    <string name="user">User</string>
+    <string name="site_details">Site details</string>
+    <string name="task_details">Task details</string>
+
+    <!-- SITE -->
+    <string name="directions">Directions:</string>
+    <string name="technology">Technology:</string>
+    <string name="power_supply">Power supply:</string>
+    <string name="address">Address:</string>
+    <string name="search">Search</string>
+
+    <!--    TASK-->
+    <string name="btn_all_text">All</string>
+    <string name="btn_done_text">Completed</string>
+    <string name="btn_undone_text">Not completed</string>
+    <string name="task_category">Category:</string>
+    <string name="task_opening_time">Task opening time:</string>
+    <string name="task_closing_time">Task closing time:</string>
+    <string name="task_technician">Technician:</string>
+    <string name="task_description">Description:</string>
+    <string name="task_site">Site:</string>
+    <string name="about_site">About site</string>
+    <string name="about_task">About task</string>
+    <string name="dialog_completed">Task completed?</string>
+
+    <!-- USER-->
+    <string name="about_me">About me</string>
+    <string name="name">Name:</string>
+    <string name="user_username">Username:</string>
+    <string name="location_recorded">Last recorded location:</string>
+
+    <!-- MAIN -->
+    <string name="location_needed">Location permission is necessary!</string>
+    <string name="enable_location">Please enable location!</string>
+    <string name="location_settings">Go to Settings</string>
+    <string name="deny">Deny</string>
+
+    <!--  MAP  -->
+    <string name="btn_site">Site</string>
+    <string name="btn_user">User</string>
+
+    <!-- ERROR MESSAGES -->
+    <string name="user_data_error">Retrieving user data failed!</string>
+    <string name="sites_loading_error">Loading sites failed!</string>
+    <string name="login_data_error">Login failed!</string>
+    <string name="required_field">This field is required!</string>
+    <string name="task_complete_failed">Updating task failed!</string>
+    <string name="task_id_failed">Could not retrieve task id!</string>
+    <string name="adding_task_failed">Adding task failed!</string>
+
+    <!-- MESSAGES-->
+    <string name="task_added_successfully">Task added successfully!</string>
+    <string name="task_complete_success">Task successfully updated!</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="close">Close</string>
+    <string name="submit">Submit</string>
+
+    <string name="distance">Distance</string>
+
+
+</resources>

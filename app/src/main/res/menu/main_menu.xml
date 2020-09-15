@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_sites_fragment"
+        android:enabled="true"
+        android:icon="@drawable/sites_icon"
+        android:title="@string/sites" />
+    <item
+        android:id="@+id/nav_tasks_fragment"
+        android:enabled="true"
+        android:icon="@drawable/task_icon"
+        android:title="@string/tasks" />
+    <item
+        android:id="@+id/nav_maps_fragment"
+        android:enabled="true"
+        android:icon="@drawable/map_icon"
+        android:title="@string/maps" />
+    <item
+        android:id="@+id/nav_profile_fragment"
+        android:enabled="true"
+        android:icon="@drawable/avatar"
+        android:title="@string/user" />
+
+</menu>
